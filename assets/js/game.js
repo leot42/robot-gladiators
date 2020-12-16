@@ -1,13 +1,13 @@
-let playerName;
+let playerName = prompt("Enter Player Name")
 let playerHealth = 100;
 let playerAttack = 10;
 let playerMoney = 10;
 
-let enemyName = "Roborto"
+let enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 let enemyHealth = 50;
 let enemyAttack = 12;
 
-let fight = function (playerName) {
+let fight = function (enemyName) {
     // Alert players that they're starting the round
     window.alert(`Welcome to Robot Gladiators ${playerName}!`);
 
@@ -69,5 +69,8 @@ let fight = function (playerName) {
         }
       }
 };
-playerName = prompt("Enter Player Name")
-fight(((playerName == "") ? "DebugFighter!" : playerName));
+// fight(((playerName == "") ? "DebugFighter!" : playerName));
+
+for(var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+  }
